@@ -8,37 +8,31 @@ export const DashboardNav = () => {
       <section className="logo-wrapper">
         <ul className="header-logo">
           <li className="header">
-          <Link to="/"><h1>Template</h1></Link>
+            <Link to="/">
+              <h1>Template Title</h1>
+            </Link>
           </li>
         </ul>
       </section>
+      
       <section className="header-middle-area">
         <nav className="main-nav" id="main-nav">
           <ul className="main-sections">
-            <li className="claim-plate">
-              <Link to="/claim-plate"
-                className="claim-link"
+            <li className="main-nav-items">
+              <Link to="/link1"
+                className="link1"
               >
                 <span>
-                  Claim Plate
+                  Link1
                 </span>
               </Link>
             </li>
-            <li className="my-plates">
-              <Link to="/my-plates" 
-                className="my-plates-link"
+            <li className="link2">
+              <Link to="/link2" 
+                className="link2"
               >
                 <span >
-                  My Plates
-                </span>
-              </Link>
-            </li>          
-            <li className="my-reviews">
-              <Link to='/my-reviews' 
-                className="my-reviews-link"
-              >
-                <span >
-                  My Reviews
+                  Link2
                 </span>
               </Link>
             </li>

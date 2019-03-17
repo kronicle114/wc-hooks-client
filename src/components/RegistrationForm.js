@@ -113,6 +113,7 @@ export const RegistrationForm = () => {
   const handleSubmit = e => {
     e.preventDefault(e); 
    
+    console.log('submitted')
     setUsername(username);
     setPassword(password);
     setConfirmPassword(confirmPassword);
@@ -136,6 +137,7 @@ export const RegistrationForm = () => {
     })
     .then(res => {
       localStorage.setItem("registered", true)
+      console.log(res);
       return res.json();
       })
     .then(data => {
@@ -307,11 +309,10 @@ export const RegistrationForm = () => {
             aria-label="confirm email"  
           />
           <button 
-            waves="light "
             type="submit" 
             aria-label="submit button registration form"  
             className="registration-submit"
-            disabled={ !username || !password || !validUsername }
+            // disabled={ !username || !password || !validUsername }
           >
             Submit
           </button>

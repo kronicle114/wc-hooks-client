@@ -10,8 +10,8 @@ export const Dashboard = (props) => {
   const [username, setUsername] = useState("");
   const [userId, setUserId ] = useState("");
   const [name, setName ] = useState("");
-  const [ submitReview, setSubmitReview ] = useState(false);
-  const [ storePlates, setStorePlates ] = useState([]);
+  // const [ submitReview, setSubmitReview ] = useState(false);
+  // const [ storePlates, setStorePlates ] = useState([]);
 
   const storeUser = async (userId, name, storePlates) => {
     const res = await fetch(
@@ -31,19 +31,19 @@ export const Dashboard = (props) => {
     name = user.name
     
     // Fetch & store plates on local storage
-    const getplates = await fetch(`${API_BASE_URL}/plates/all/${user.id}`)
-    const plates = await getplates.json();
+    // const getplates = await fetch(`${API_BASE_URL}/plates/all/${user.id}`)
+    // const plates = await getplates.json();
    
-    setStorePlates(plates)
-    localStorage.setItem('hasPlates', plates)
-    storePlates = plates
+    // setStorePlates(plates)
+    // localStorage.setItem('hasPlates', plates)
+    // storePlates = plates
    
     return user;
   }
 
   useEffect(() => {
     setUsername(localStorage.user)
-    storeUser(userId, name, storePlates);
+    // storeUser(userId, name, storePlates);
     localStorage.removeItem('unclaimedPlate')
     localStorage.removeItem('success')
   }, []);
@@ -69,7 +69,7 @@ export const Dashboard = (props) => {
       <section className="dashboard-greeting">
         <p className="greeting-text">hey there, {username}</p>
       </section>
-      <button 
+      {/* <button 
           className="add-review"
           onClick={ e => {
               e.preventDefault(); 
@@ -77,7 +77,7 @@ export const Dashboard = (props) => {
             }
           }>
           <span className="new-review">New Review</span>
-      </button>
+      </button> */}
       {/* {reviewForm}
       <ReviewList />  */}
     </main> 
