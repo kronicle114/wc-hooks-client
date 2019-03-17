@@ -1,0 +1,48 @@
+.dashboard {
+  background: #f4f4f4;
+  height: 100vh;
+  max-width: 100%;
+  width: 100vw;
+}
+
+button.logout {
+  background: transparent;
+  border: none;
+  color: #343434;
+  font-size: 14px;
+  margin: 4px;
+}
+
+#logout-link {
+  text-decoration: none;
+}
+
+.logout-div {
+  margin: 2px 2px 0px 0px;
+  float: right;
+}
+
+button.add-review {
+  background:  rgb(52, 110, 98);
+  padding: 10px 15px;
+  color: #f4f4f4;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.45);
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+}
+
+button.add-review:hover {
+  background: whitesmoke;
+  color: #343434;
+}
+
+.dashboard-greeting p {
+  color:rgb(52, 110, 98);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 30px;
+  letter-spacing: 1px;
+}
