@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import LoginForm from './LoginForm';
+import '../styles/nav.css';
 import '../styles/modal.css';
 
 export const LandingNav = () => {

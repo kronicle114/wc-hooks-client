@@ -43,7 +43,7 @@ export const Dashboard = (props) => {
 
   useEffect(() => {
     setUsername(localStorage.user)
-    // storeUser(userId, name, storePlates);
+    storeUser(userId, name, /* storePlates */);
     localStorage.removeItem('unclaimedPlate')
     localStorage.removeItem('success')
   }, []);

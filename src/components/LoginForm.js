@@ -112,6 +112,7 @@ export const LoginForm = () => {
                 value={password}
                 onChange={e => setPassword(e.target.value)}
                 placeholder="enter password"
+                autoComplete="current-password" 
                 type="password"
                 name="password"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" 
