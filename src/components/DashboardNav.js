@@ -9,7 +9,7 @@ export const DashboardNav = () => {
         <ul className="header-logo">
           <li className="header">
             <Link to="/">
-              <h1>Template Title</h1>
+              <h1>What's Cooking</h1>
             </Link>
           </li>
         </ul>
