@@ -33,13 +33,15 @@ export const RecipeList = () => {
   }
 
   let recipe;
+  const IMG_BASE_URL = 'https://spoonacular.com/recipeImages/';
   if (recipeList.length > 0) {
-    console.log('recipe results: ')
+    console.log('recipe results: ', recipeList)
+    console.log(recipeList.image)
     return recipe = recipeList.map( (recipe, index) => {
       return (
         <li key={index}>
           <h2>{recipe.title}</h2>
-          <img src={recipe.image} alt={recipe.title} />
+          <img src={`${IMG_BASE_URL}${recipe.image}`} alt={recipe.title} />
           <ul className="recipe-info">
             <li><span>Prep Time: </span>{recipe.readyInMinutes}</li>
             <li><span>Servings: </span>{recipe.servings}</li>
