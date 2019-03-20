@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-// import Recipe from './Recipe';
 import '../styles/recipelist.css';
 
 export const RecipeList = () => {
   const [ recipeList, setRecipeList ] = 
   useState({});
-  const limit = 2;
+  const limit = 10;
   const [ searchTerm, setSearchTerm ] = 
   useState('');
 
@@ -39,7 +38,7 @@ export const RecipeList = () => {
     console.log(recipeList.image)
     return recipe = recipeList.map( (recipe, index) => {
       return (
-        <li key={index}>
+        <li key={index} recipe-id={recipe.id}>
           <h2>{recipe.title}</h2>
           <img src={`${IMG_BASE_URL}${recipe.image}`} alt={recipe.title} />
           <ul className="recipe-info">
@@ -86,7 +85,6 @@ export const RecipeList = () => {
         </form>
 
         <ul className="recipe-list">
-          {/* <Recipe recipes={recipeList} /> */}
           recipe
         </ul>
     </section>
