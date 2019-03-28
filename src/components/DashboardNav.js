@@ -23,7 +23,7 @@ export const DashboardNav = () => {
                 className="link1"
               >
                 <span>
-                  Link1
+                  Add Recipe
                 </span>
               </Link>
             </li>
