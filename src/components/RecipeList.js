@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Spinner from 'react-spinkit';
 import '../styles/recipelist.css';
 
 export const RecipeList = () => {
@@ -31,14 +32,16 @@ export const RecipeList = () => {
     })
   }
 
-  let recipe;
+  let recipe = (<div className="spinner" style={{}}>
+  <Spinner name="line-spin-fade-loader" color="green"/>
+</div>);
   const IMG_BASE_URL = 'https://spoonacular.com/recipeImages/';
   if (recipeList.length > 0) {
     console.log('recipe results: ', recipeList)
     console.log(recipeList.image)
     return recipe = recipeList.map( (recipe, index) => {
       return (
-        <li key={index} recipe-id={recipe.id}>
+        <li key={index} recipe-id={recipe.id} className="recipe-card">
           <h2>{recipe.title}</h2>
           <img src={`${IMG_BASE_URL}${recipe.image}`} alt={recipe.title} />
           <ul className="recipe-info">
@@ -85,7 +88,7 @@ export const RecipeList = () => {
         </form>
 
         <ul className="recipe-list">
-          recipe
+          {recipe}
         </ul>
     </section>
   );
