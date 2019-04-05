@@ -3,6 +3,13 @@
   padding: 10px;
 }
 
+.spinner {
+  position: absolute;
+  margin: 20px auto;
+  left: 50%;
+  right: 50%;
+}
+
 .recipe-list {
   width: 85%;
 }

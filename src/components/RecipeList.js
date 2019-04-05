@@ -32,11 +32,11 @@ export const RecipeList = () => {
     })
   }
 
-  let recipe = (<div className="spinner" style={{}}>
-  <Spinner name="line-spin-fade-loader" color="green"/>
-</div>);
+  let recipe;
   const IMG_BASE_URL = 'https://spoonacular.com/recipeImages/';
-  if (recipeList.length > 0) {
+  if (recipeList.length <= 0) {
+    return;
+  } else if (recipeList.length > 0) {
     console.log('recipe results: ', recipeList)
     console.log(recipeList.image)
     return recipe = recipeList.map( (recipe, index) => {
@@ -53,10 +53,15 @@ export const RecipeList = () => {
     })
   } else {
     console.log('no recipes found')
-    recipe = <p>Loading...</p>
+    recipe = (
+      <div className="spinner" style={{}}>
+        <Spinner name="line-spin-fade-loader" color="green"/>
+      </div>
+    );
   }
 
   return (
+    <section className="recipe-section">
        <section className="search-section">
         <form 
           id="search-form"
@@ -86,10 +91,11 @@ export const RecipeList = () => {
             </button>           
           </fieldset>
         </form>
+      </section>
 
-        <ul className="recipe-list">
-          {recipe}
-        </ul>
+      <ul className="recipe-list">
+        {recipe}
+      </ul>
     </section>
   );
 };
