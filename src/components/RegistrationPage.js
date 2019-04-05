@@ -6,7 +6,7 @@ export function RegistrationPage() {
     return (
         <div className="registration-page">
             <h1>Sign Up</h1>
-            <p>Start using this template</p>
+            <p>What's Cooking Tonight?</p>
             <RegistrationForm />
         </div>
     );

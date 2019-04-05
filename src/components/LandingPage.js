@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import LandingNav from './LandingNav';
-// import ReviewList from './review-list';
+import RecipeList from './RecipeList';
 import About from './About';
 import '../styles/landing.css';
 
@@ -17,15 +17,15 @@ export const LandingPage = (props) => {
           <LandingNav />
           <article className='landing-content'>
             <article className='landing-text'>
-              <h1>Template</h1>
-              <p id="description">This is a react front-end template</p>
+              <h1>What's Cooking</h1>
+              <p id="description">Search recipes or get inspired to cook</p>
               <article className="about">
                 <About />
               </article>  
             </article>   
           </article>
         </section>
-        {/* <ReviewList /> */}
+        <RecipeList />
       </main>
     );
 }

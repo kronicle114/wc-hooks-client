@@ -112,7 +112,7 @@ export const RegistrationForm = () => {
    /* ====== HANDLE FORM SUBMIT ====== */
   const handleSubmit = e => {
     e.preventDefault(e); 
-   
+  
     setUsername(username);
     setPassword(password);
     setConfirmPassword(confirmPassword);
@@ -246,6 +246,7 @@ export const RegistrationForm = () => {
             value={username}
             onChange={e => setUsername(e.target.value)}
             placeholder="enter username"
+            autoComplete="username" 
             type="text"
             name="username"
             id="register-username"
@@ -278,6 +279,7 @@ export const RegistrationForm = () => {
             value={confirmPassword}
             onChange={e => setConfirmPassword(e.target.value)}
             placeholder="confirm password"
+            autoComplete="new-password" 
             type="password"
             name="passwordConfirm"
             required
@@ -289,6 +291,7 @@ export const RegistrationForm = () => {
             value={email}
             onChange={e => setEmail(e.target.value)}
             placeholder="enter email"
+            autoComplete="email" 
             type="email"
             name="email"
             pattern="^([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,4}))$"
@@ -307,11 +310,10 @@ export const RegistrationForm = () => {
             aria-label="confirm email"  
           />
           <button 
-            waves="light "
             type="submit" 
             aria-label="submit button registration form"  
             className="registration-submit"
-            disabled={ !username || !password || !validUsername }
+            // disabled={ !username || !password || !validUsername }
           >
             Submit
           </button>

@@ -60,14 +60,16 @@ export const LoginForm = () => {
         return auth;
       })
       .catch(err => {
-        const { code } = err;
-        const message = code === 401 ? 'Incorrect username or password' : 'Unable to login, please try again';
+        // const { code } = err;
+        // const message = code === 401 ? 'Incorrect username or password' : 'Unable to login, please try again';
         
-        return Promise.reject(
-          new Error({
-            _error: message
-          })
-        )
+        console.log(err);
+        // return Promise.reject(
+        //   new Error({
+        //     // _error: message
+        //     error: 'Unable to login'
+        //   })
+        // )
       })
   };
 
@@ -110,6 +112,7 @@ export const LoginForm = () => {
                 value={password}
                 onChange={e => setPassword(e.target.value)}
                 placeholder="enter password"
+                autoComplete="current-password" 
                 type="password"
                 name="password"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" 
