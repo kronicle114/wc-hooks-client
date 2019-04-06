@@ -14,16 +14,17 @@
   width: 85%;
 }
 
-.recipe-card {
+.recipe-item {
   margin: 10px auto;
   width: 85%;
+  border: 1px solid black;
 }
 
-.recipe-card h2 {
+.recipe-item h2 {
   line-height: 2;
 }
 
-.recipe-card img {
+.recipe-item img {
   width: 90%;
   max-width: 400px;
 }

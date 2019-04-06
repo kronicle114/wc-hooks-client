@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { API_BASE_URL } from '../config';
 import { Link } from 'react-router-dom';
 import DashboardNav from './DashboardNav';
-import RecipeList from './RecipeList';
+// import RecipeList from './RecipeList';
 import '../styles/dashboard.css';
 // import ReviewForm from './review-form';
 
@@ -79,7 +79,7 @@ export const Dashboard = (props) => {
           <span className="new-review">New Review</span>
       </button> */}
       {/* {reviewForm} */}
-      <RecipeList />  
+      {/* <RecipeList />   */}
     </main> 
   )
 }

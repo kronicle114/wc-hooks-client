@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import LandingNav from './LandingNav';
 import RecipeList from './RecipeList';
+import SearchBar from './SearchBar';
 import About from './About';
 import '../styles/landing.css';
 
@@ -25,7 +26,7 @@ export const LandingPage = (props) => {
             </article>   
           </article>
         </section>
-        <RecipeList />
+        <SearchBar />
       </main>
     );
 }
