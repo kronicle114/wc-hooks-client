@@ -37,6 +37,7 @@ export const Recipe = (props) => {
   // // console.log('Recipe map', props.recipes.map( (recipe, index) => )
 
   // return recipe;
+  console.log(props, 'recipe');
   return(<p>Test</p>)
 };
 
