@@ -40,7 +40,7 @@ export const SearchBar = () => {
         onSubmit={e => handleSubmit(e)}
         onKeyUp={() => console.log(searchTerm)}
         >
-        <fieldset id="review-search">
+        <fieldset id="recipe-search">
         <legend>Search A Recipe...</legend>
           <label 
             htmlFor="search"
@@ -63,7 +63,9 @@ export const SearchBar = () => {
         </fieldset>
       </form>
 
-      <RecipeList recipes={recipeList} />
+      <ul>
+        <RecipeList recipes={recipeList} />
+      </ul>
    </section>
   );
 
