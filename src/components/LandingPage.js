@@ -27,7 +27,6 @@ export const LandingPage = (props) => {
           </article>
         </section>
         <SearchBar />
-        <RecipeList />
       </main>
     );
 }

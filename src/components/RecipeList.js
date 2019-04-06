@@ -5,7 +5,12 @@ import '../styles/recipelist.css';
 export const RecipeList = (props) => {
   // console.log('RecipeList props: ', props)
 
-  let recipe;
+  let recipe = (
+    <div className="spinner" style={{}}>
+      <Spinner name="line-spin-fade-loader" color="green"/>
+    </div>
+  );
+
   const IMG_BASE_URL = 'https://spoonacular.com/recipeImages/';
   if (props.recipes) {
     // console.log('recipe results: ', props.recipes)
@@ -22,14 +27,7 @@ export const RecipeList = (props) => {
         </li>
       )
     })
-  } else {
-    console.log('no recipes found')
-    recipe = (
-      <div className="spinner" style={{}}>
-        <Spinner name="line-spin-fade-loader" color="green"/>
-      </div>
-    );
-  }
+  } 
 
   return (recipe);
 };
